@@ -1,0 +1,29 @@
+<br>
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Title</label>
+            <input type="text" id="title" formControlName="title" class="form-control" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Body</label>
+            <input type="text" id="body" formControlName="body" class="form-control" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-success">{{editMode?'Update':'Save'}}</button>
+          <button class="btn btn-danger" (click)="onDelete()" *ngIf="editMode">Delete</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
